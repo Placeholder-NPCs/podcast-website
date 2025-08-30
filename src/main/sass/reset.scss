@@ -38,16 +38,14 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: greyscale;
 	letter-spacing: 0.02rem;
-
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+	-webkit-appearance:none;
 
     @media print {
         font-size: 10pt;
     }
-
-	-webkit-appearance:none;
 }
 
 article,aside,details,figcaption,figure,
@@ -78,7 +76,7 @@ ins {
     background-color:#ff9;
     color:#000;
     text-decoration:none;
-	font-family: "Roboto", sans-serif;
+	  font-family: "Roboto", sans-serif;
     display: inline-block;
     white-space: nowrap;
     padding-left: 0.25rem;
@@ -90,7 +88,7 @@ mark {
     background-color:#ff9;
     color:#000;
     font-weight:bold;
-	font-family: "Roboto", sans-serif;
+	  font-family: "Roboto", sans-serif;
     display: inline-block;
     white-space: nowrap;
     padding-left: 0.25rem;

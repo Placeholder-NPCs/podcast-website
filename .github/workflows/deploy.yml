@@ -31,10 +31,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build Project
-        run: ./gradlew clean build uberJar
-
-      - name: Run Java Application
-        run: java -jar build/libs/podcast-website-uber.jar
+        run: ./gradlew clean build run
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

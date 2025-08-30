@@ -63,6 +63,10 @@ java {
 	targetCompatibility = JavaVersion.VERSION_21
 }
 
+ext {
+	javaMainClass = "show.placeholdernpcs.Application"
+}
+
 spotless {
 	java {
 		importOrder()
@@ -108,8 +112,6 @@ compileSass {
 	style = compressed
 	noCharset ()
 	noErrorCss ()
-	sourceMap = file
-	sourceMapUrls = relative
 }
 
 processResources {
