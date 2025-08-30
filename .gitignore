@@ -1,3 +1,15 @@
+# Common IDE Folders
+.gradle
+.idea
+.vscode
+.classpath
+.factorypath
+.project
+.settings
+build/
+deploy/
+node_modules/
+
 # Compiled class file
 *.class
 

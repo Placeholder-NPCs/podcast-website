@@ -1,0 +1,129 @@
+plugins {
+	// Compiling
+	id 'application'
+	id 'java'
+	id 'io.miret.etienne.sass' version '1.5.1' // SASS Compiler
+
+	// Formatting
+	id 'checkstyle'
+	id 'com.diffplug.spotless' version "7.2.1" // Code formatting
+
+	// Testing
+	id 'jacoco' // Code coverage
+	id 'com.adarshr.test-logger' version '4.0.0' // Test Logger
+}
+
+group = 'show.placeholdernpcs'
+version = '0.0.0'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// commonmark
+	// MVN Repository: https://mvnrepository.com/artifact/org.commonmark/commonmark
+	implementation 'org.commonmark:commonmark:0.25.1'
+	implementation 'org.commonmark:commonmark-ext-gfm-tables:0.25.1'
+	implementation 'org.commonmark:commonmark-ext-heading-anchor:0.25.1'
+	implementation 'org.commonmark:commonmark-ext-yaml-front-matter:0.25.1'
+
+	// thymeleaf
+	// Website: https://www.thymeleaf.org/index.html
+	// MVN Repository: https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+	implementation 'org.thymeleaf:thymeleaf:3.1.3.RELEASE'
+	testImplementation 'org.thymeleaf.testing:thymeleaf-testing:3.1.3.RELEASE'
+
+	// Jackson Data Modules
+	// MVN Repository: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.2'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.19.2'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.19.2'
+	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.19.2'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.19.2'
+
+	// Testing Dependencies
+	// MVN Repository: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.13.4'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.13.4'
+	testImplementation 'org.junit.jupiter:junit-jupiter-params:5.13.4'
+}
+
+application {
+	mainClass = 'show.placeholdernpcs.Application'
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+spotless {
+	java {
+		importOrder()
+		removeUnusedImports()
+		googleJavaFormat().reflowLongStrings()
+		formatAnnotations()
+	}
+	format("styling") {
+		target("src/*/sass/**/*.css", "src/*/sass/**/*.scss")
+	}
+}
+
+compileJava {
+	dependsOn 'spotlessApply'
+	dependsOn 'compileSass'
+}
+
+task copyStaticAssets(type: Copy) {
+	description 'Copying static assets into the deployment folder.'
+	from 'src/main/assets'
+	into 'deploy/'
+}
+compileJava.dependsOn copyStaticAssets
+
+jacoco {
+	toolVersion = "0.8.12"
+}
+
+test {
+	useJUnitPlatform()
+	finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+sass {
+	version = '1.91.0'
+	directory = file ("${rootDir}/.gradle/sass")
+	baseUrl = 'https://github.com/sass/dart-sass/releases/download'
+}
+
+compileSass {
+	outputDir = project.file ("${projectDir}/deploy/styles/")
+	sourceDir = project.file ("${projectDir}/src/main/sass")
+	style = compressed
+	noCharset ()
+	noErrorCss ()
+	sourceMap = file
+	sourceMapUrls = relative
+}
+
+processResources {
+	filesMatching('**/*.properties') {
+		filter { it.replace("\${project.name}", 'Placeholder NPCs') }
+		filter { it.replace("\${project.version}", "${project.property('version')}") }
+		filter { it.replace("\${project.artifact}", 'podcast-website') }
+		filter { it.replace("\${project.group}", "${project.property('group')}") }
+	}
+}
+
+
+tasks.register('uberJar', Jar) {
+	archiveClassifier = 'uber'
+
+	from sourceSets.main.output
+
+	dependsOn configurations.runtimeClasspath
+	from {
+		configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+	}
+}
