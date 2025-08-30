@@ -123,10 +123,11 @@ processResources {
 
 
 tasks.register('uberJar', Jar) {
-	archiveClassifier = 'uber'
-
+	archiveClassifier.set('uber')
+	archiveBaseName.set('podcast-website')
+	archiveVersion.set('')
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 	from sourceSets.main.output
-
 	dependsOn configurations.runtimeClasspath
 	from {
 		configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
