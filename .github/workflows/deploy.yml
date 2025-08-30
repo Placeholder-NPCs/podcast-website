@@ -21,10 +21,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'corretto'
-          cache: maven
-
-      - name: Install Dependencies
-        run: npm install
+          cache: gradle
 
       - name: Build Project
         run: ./gradlew clean build uberJar
