@@ -2,7 +2,7 @@ plugins {
 	// Compiling
 	id 'application'
 	id 'java'
-	id 'io.miret.etienne.sass' version '1.5.1' // SASS Compiler
+	id 'io.miret.etienne.sass' version '1.5.2' // SASS Compiler
 
 	// Formatting
 	id 'com.diffplug.spotless' version "7.2.1" // Code formatting
@@ -35,11 +35,11 @@ dependencies {
 
 	// Jackson Data Modules
 	// MVN Repository: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.2'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.19.2'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.19.2'
-	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.19.2'
-	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.19.2'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.0'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.20.0'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.20.0'
+	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.20.0'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.20.0'
 
 	// project lombok
 	compileOnly 'org.projectlombok:lombok:1.18.34'
