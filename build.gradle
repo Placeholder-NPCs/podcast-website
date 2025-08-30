@@ -112,6 +112,7 @@ compileSass {
 	style = compressed
 	noCharset ()
 	noErrorCss ()
+	sourceMap = none
 }
 
 processResources {
@@ -122,7 +123,6 @@ processResources {
 		filter { it.replace("\${project.group}", "${project.property('group')}") }
 	}
 }
-
 
 tasks.register('uberJar', Jar) {
 	archiveClassifier.set('uber')
