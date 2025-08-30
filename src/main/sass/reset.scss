@@ -135,6 +135,23 @@ html, body {
   }
 }
 
+body > header,
+body > nav,
+body > main,
+body > footer {
+  padding: 0 calc(50% - 45rem);
+
+  @media (max-width: 92rem) {
+    padding: 0 1rem;
+  }
+}
+
+body > main {
+  border-top: var(--size-2px) solid var(--palette-color-armadillo-500);
+  border-bottom: var(--size-2px) solid var(--palette-color-armadillo-500);
+}
+
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
 	display:block;
