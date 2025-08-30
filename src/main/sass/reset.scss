@@ -1,9 +1,90 @@
+:root {
+  /* Soft Amber Colour Palette */
+  --palette-color-softamber-50: #fdf4e4;
+  --palette-color-softamber-100: #f4ebdb;
+  --palette-color-softamber-200: #ebe1d2;
+  --palette-color-softamber-300: #e2d8c9;
+  --palette-color-softamber-400: #d9cfc0;
+  --palette-color-softamber-500: #d1c6b4;
+  --palette-color-softamber-600: #b29d7c;
+  --palette-color-softamber-700: #866a37;
+  --palette-color-softamber-800: #533900;
+  --palette-color-softamber-900: #231600;
+
+  /* Armadillo Colour Palette */
+  --palette-color-armadillo-50: #f9f4ee;
+  --palette-color-armadillo-100: #d1cdc6;
+  --palette-color-armadillo-200: #aba6a0;
+  --palette-color-armadillo-300: #86827c;
+  --palette-color-armadillo-400: #635f59;
+  --palette-color-armadillo-500: #433e37;
+  --palette-color-armadillo-600: #42341f;
+  --palette-color-armadillo-700: #3d2700;
+  --palette-color-armadillo-800: #2f1d00;
+  --palette-color-armadillo-900: #241500;
+
+  /* Fuscous Gray Colour Palette */
+  --palette-color-fuscousgray-50: #f6f5f1;
+  --palette-color-fuscousgray-100: #d3d2ce;
+  --palette-color-fuscousgray-200: #b1b1ac;
+  --palette-color-fuscousgray-300: #91908c;
+  --palette-color-fuscousgray-400: #71716d;
+  --palette-color-fuscousgray-500: #54534d;
+  --palette-color-fuscousgray-600: #4b4731;
+  --palette-color-fuscousgray-700: #3e360c;
+  --palette-color-fuscousgray-800: #2d2600;
+  --palette-color-fuscousgray-900: #1d1800;
+
+  /* Tana Colour Palette */
+  --palette-color-tana-50: #fdfff1;
+  --palette-color-tana-100: #f6f9e0;
+  --palette-color-tana-200: #eff1d9;
+  --palette-color-tana-300: #e7ead2;
+  --palette-color-tana-400: #e0e3cb;
+  --palette-color-tana-500: #d9dcc1;
+  --palette-color-tana-600: #aeb286;
+  --palette-color-tana-700: #787c3d;
+  --palette-color-tana-800: #434600;
+  --palette-color-tana-900: #191a00;
+
+  /* Quicksand Colour Palette */
+  --palette-color-quicksand-50: #fff2ef
+  --palette-color-quicksand-100: #ffdad2;
+  --palette-color-quicksand-200: #eec9c0;
+  --palette-color-quicksand-300: #ddb8b0;
+  --palette-color-quicksand-400: #cca89f;
+  --palette-color-quicksand-500: #bd978e;
+  --palette-color-quicksand-600: #aa7366;
+  --palette-color-quicksand-700: #8b4536;
+  --palette-color-quicksand-800: #671100;
+  --palette-color-quicksand-900: #330500;
+
+  /* Fall Green Colour Palette */
+  --palette-color-fallgreen-50: #ffffed;
+  --palette-color-fallgreen-100: #fdfcd1;
+  --palette-color-fallgreen-200: #f9f8cc;
+  --palette-color-fallgreen-300: #f4f4c8;
+  --palette-color-fallgreen-400: #f0efc4;
+  --palette-color-fallgreen-500: #ecebbd;
+  --palette-color-fallgreen-600: #bfbd7c;
+  --palette-color-fallgreen-700: #868227;
+  --palette-color-fallgreen-800: #4b4700;
+  --palette-color-fallgreen-900: #1b1900;
+
+  /* Sizes */
+  --size-1px: 0.0625rem;
+  --size-2px: 0.125rem;
+  --size-4px: 0.25rem;
+  --size-8px: 0.5rem;
+  --size-16px: 1rem;
+  --size-32px: 2rem;
+}
+
 * {
 	box-sizing: border-box;
 	color: inherit;
 	fill: inherit;
-
-    line-height: 125%;
+  line-height: 125%;
 }
 
 html, body, div, span, object, iframe,
@@ -18,19 +99,25 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, main, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:inherit;
-    font-weight:inherit;
-    vertical-align:baseline;
-    background:transparent;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:inherit;
+  font-weight:inherit;
+  vertical-align:baseline;
+  background:transparent;
 	color:inherit;
 
-    -webkit-background-clip: padding-box;
-    -moz-background-clip:    padding;
-    background-clip:         padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+}
+
+html {
+  background: var(--palette-color-softamber-500);
+  color: var(--palette-color-armadillo-500);
+  fill: var(--palette-color-armadillo-500);
 }
 
 html, body {
@@ -38,14 +125,14 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: greyscale;
 	letter-spacing: 0.02rem;
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 	-webkit-appearance:none;
 
-    @media print {
-        font-size: 10pt;
-    }
+  @media print {
+      font-size: 10pt;
+  }
 }
 
 article,aside,details,figcaption,figure,
@@ -54,17 +141,17 @@ footer,header,hgroup,menu,nav,section {
 }
 
 ul, ol {
-    list-style:none;
+  list-style:none;
 }
 
 blockquote, q {
-    quotes:none;
+  quotes:none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content:'';
-    content:none;
+  content:'';
+  content:none;
 }
 
 a {
@@ -73,35 +160,35 @@ a {
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-	  font-family: "Roboto", sans-serif;
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-weight:bold;
-	  font-family: "Roboto", sans-serif;
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+  background-color:#ff9;
+  color:#000;
+  font-weight:bold;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+  border-bottom:1px dotted;
+  cursor:help;
 }
 
 /* CLEARFIX GROUP */
@@ -123,13 +210,13 @@ svg {
 *:first-child+html .v3-cFormField > legend { zoom: 1; } /* IE7 */
 
 @media not print {
-    .print-only {
-        display: none;
-    }
+  .print-only {
+    display: none;
+  }
 }
 
 @media not screen {
-    .screen-only {
-        display: none;
-    }
+  .screen-only {
+    display: none;
+  }
 }
