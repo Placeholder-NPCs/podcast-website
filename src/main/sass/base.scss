@@ -72,8 +72,6 @@ body > nav {
     padding: 0.5rem 0.5rem;
     min-width: 10rem;
 
-    stroke: var(--palette-color-tana-500);
-
     svg {
       height: 1.5rem;
       padding: 0.125rem;
@@ -81,6 +79,7 @@ body > nav {
       background:  var(--palette-color-armadillo-500);
       border-radius: var(--size-2px);
       stroke: var(--palette-color-tana-500);
+      fill: none;
     }
 
     span {
