@@ -3,8 +3,15 @@
 <body>
     <!-- Stylesheets -->
     <th:block th:fragment="stylesheets">
-        <link rel="stylesheet" href="/podcast-website/styles/reset.css" />
-        <link rel="stylesheet" href="/podcast-website/styles/base.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/base.css" />
+    </th:block>
+
+    <!-- Meta Data -->
+    <th:block th:fragment="metadata">
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex, noimageai, noai" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
     </th:block>
 
     <!-- Site Header Fragment -->
@@ -15,10 +22,22 @@
 
     <!-- Site Navigation Fragment -->
     <nav th:fragment="site-navigation">
-        <a href="/podcast-website/">Latest</a>
-        <a href="/podcast-website/episodes">Episodes</a>
-        <a href="/podcast-website/cast">Cast</a>
-        <a href="/podcast-website/about">About</a>
+        <a class="current-page" href="./" >
+            <th:block th:replace="~{svg :: tower-broadcast}" />
+            <span>Latest</span>
+        </a>
+        <a href="./episodes">
+            <th:block th:replace="~{svg :: headphones}" />
+            <span>Episodes</span>
+        </a>
+        <a href="./cast">
+            <th:block th:replace="~{svg :: users}" />
+            <span>Cast</span>
+        </a>
+        <a href="./about">
+            <th:block th:replace="~{svg :: pulse}" />
+            <span>About</span>
+        </a>
     </nav>
 </body>
 </html>
