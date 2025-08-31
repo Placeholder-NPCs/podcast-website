@@ -9,6 +9,10 @@ body > footer {
   @media (max-width: 94rem) {
     padding: 0 2rem;
   }
+
+  @media (max-width: 46rem) {
+    padding: 0 1rem;
+  }
 }
 
 body > main {
@@ -23,11 +27,11 @@ body > header {
   align-items: start;
 
   img {
-    width: 3rem;
+    width: 7rem;
     margin: 3rem 0 0;
 
     border: var(--size-1px) solid var(--palette-color-armadillo-500);
-    border-radius: var(--size-2px);
+    border-radius: var(--size-4px);
   }
 
   h1 {
@@ -35,6 +39,19 @@ body > header {
     font-weight: bold;
     line-height: 5rem;
     white-space: nowrap;
+  }
+
+  @media (max-width: 46rem) {
+
+    img {
+      width: 5rem;
+      margin: 2rem 0 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
   }
 }
 
