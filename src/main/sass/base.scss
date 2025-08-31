@@ -36,7 +36,6 @@ body > header {
 
   h1 {
     font-size: 3rem;
-    font-weight: bold;
     line-height: 5rem;
     white-space: nowrap;
   }
@@ -51,6 +50,7 @@ body > header {
     h1 {
       font-size: 2rem;
       line-height: 3rem;
+      font-weight: bold;
     }
   }
 }
@@ -85,7 +85,7 @@ body > nav {
     span {
       display: inline-block;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: lighter;
     }
 
     &.current-page {
@@ -140,6 +140,10 @@ body > nav {
 
       &:hover {
         border-color: var(--palette-color-tana-500);
+      }
+
+      span {
+        font-weight: bold;
       }
     }
   }
