@@ -22,6 +22,6 @@
   "display": "fullscreen",
   "dir": "auto",
   "lang": "en-AU",
-  "start_url": "/",
-  "scope": "/"
+  "start_url": "/podcast-website/",
+  "scope": "/podcast-website/"
 }
