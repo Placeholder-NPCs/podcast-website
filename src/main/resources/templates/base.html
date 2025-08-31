@@ -17,11 +17,11 @@
 
     <!-- Service Worker -->
     <th:block th:fragment="service-worker">
-        <link crossorigin="use-credentials" rel="manifest" href="/manifest.webmanifest" />
+        <link crossorigin="use-credentials" rel="manifest" href="./manifest.webmanifest" />
 
         <script>if ("serviceWorker" in navigator) {
               navigator.serviceWorker
-              .register("/service-worker.js")
+              .register("./service-worker.js")
               .then(function (registration) {
                   // Registration was successful
                   console.log("ServiceWorker registration successful with scope: ", registration.scope);
