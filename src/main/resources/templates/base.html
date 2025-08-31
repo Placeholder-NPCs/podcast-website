@@ -15,10 +15,28 @@
         <meta name="theme-color" content="#d1c6b4" />
     </th:block>
 
+    <!-- Service Worker -->
+    <th:block th:fragment="service-worker">
+        <link crossorigin="use-credentials" rel="manifest" href="/manifest.webmanifest" />
+
+        <script>if ("serviceWorker" in navigator) {
+              navigator.serviceWorker
+              .register("/service-worker.js")
+              .then(function (registration) {
+                  // Registration was successful
+                  console.log("ServiceWorker registration successful with scope: ", registration.scope);
+              })
+              .catch(function (err) {
+                  // registration failed :(
+                  console.log("ServiceWorker registration failed: ", err);
+              });
+            }</script>
+    </th:block>
+
     <!-- Site Header Fragment -->
     <header th:fragment="site-header">
         <h1><a href="/">Placeholder NPCs</a></h1>
-        <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42989027/42989027-1740182182670-c5d593678b89f.jpg" />
+        <img src="./site-logo.jpg" />
     </header>
 
     <!-- Site Navigation Fragment -->
