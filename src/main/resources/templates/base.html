@@ -21,20 +21,20 @@
     </header>
 
     <!-- Site Navigation Fragment -->
-    <nav th:fragment="site-navigation">
-        <a class="current-page" href="./" >
+    <nav th:fragment="site-navigation(activePage)">
+        <a th:classappend="${activePage == 'index' ? 'current-page' : ''}" href="./" >
             <th:block th:replace="~{svg :: tower-broadcast}" />
             <span>Latest</span>
         </a>
-        <a href="./episodes">
+        <a th:classappend="${activePage == 'episodes' ? 'current-page' : ''}" href="./episodes">
             <th:block th:replace="~{svg :: headphones}" />
             <span>Episodes</span>
         </a>
-        <a href="./cast">
+        <a th:classappend="${activePage == 'cast' ? 'current-page' : ''}" href="./cast">
             <th:block th:replace="~{svg :: users}" />
             <span>Cast</span>
         </a>
-        <a href="./about">
+        <a th:classappend="${activePage == 'about' ? 'current-page' : ''}" href="./about">
             <th:block th:replace="~{svg :: pulse}" />
             <span>About</span>
         </a>
