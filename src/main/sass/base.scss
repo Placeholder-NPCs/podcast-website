@@ -132,7 +132,7 @@ body > nav {
       flex: 1 100%;
       min-width: 0;
       font-size: 0.666rem;
-      border-radius: 0 0 var(--size-2px) var(--size-2px);
+      border-radius: 0;
 
       &.current-page {
         border-bottom: none;
