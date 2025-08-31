@@ -40,5 +40,38 @@
             <span>About</span>
         </a>
     </nav>
+
+    <!-- Site Footer Fragment -->
+    <footer th:fragment="site-footer">
+        <p class="copyright">&copy; Placeholder NPCs 2025. All Rights Reserved.</p>
+
+        <dl>
+            <dt>Where to listen</dt>
+            <dd>
+                <a href="https://open.spotify.com/show/6VvK7kLYbyEE4kwElpMGvj" target="_blank">
+                    <th:block th:replace="~{logo :: spotify}" />
+                    <span>Spotify</span>
+                </a>
+            </dd>
+            <dd>
+                <a href="https://podcasts.apple.com/us/podcast/placeholder-npcs/id1798436931" target="_blank">
+                    <th:block th:replace="~{logo :: apple-podcasts}" />
+                    <span>Apple Podcasts</span>
+                </a>
+            </dd>
+            <dd>
+                <a href="https://www.youtube.com/@PlaceholderNPCs" target="_blank">
+                    <th:block th:replace="~{logo :: youtube}" />
+                    <span>YouTube</span>
+                </a>
+            </dd>
+            <dd>
+                <a href="https://music.amazon.com/podcasts/57377415-0c89-4853-bbbc-c4e2fa117a04/placeholder-npcs" target="_blank">
+                    <th:block th:replace="~{logo :: amazon}" />
+                    <span>Amazon Music</span>
+                </a>
+            </dd>
+        </dl>
+    </footer>
 </body>
 </html>
