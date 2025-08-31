@@ -125,6 +125,7 @@ body > nav {
     gap: 0;
 
     border-top: var(--size-2px) solid var(--palette-color-armadillo-500);
+    border-bottom: var(--size-2px) solid var(--palette-color-armadillo-500);
     background: var(--palette-color-taupegray-500);
 
     & > a {
