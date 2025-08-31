@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import show.placeholdernpcs.model.Configuration;
 import show.placeholdernpcs.service.template.TemplateService;
 
 public class Application {
@@ -52,5 +53,9 @@ public class Application {
       throw new UnsupportedOperationException(
           "Listing resources from non-file URLs is not directly supported by this method.");
     }
+  }
+
+  public static Configuration getConfiguration() {
+    return Configuration.builder().urlPathPrefix(System.getenv("URL_PATH_PREFIX")).build();
   }
 }

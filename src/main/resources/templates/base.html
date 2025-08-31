@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Stylesheets -->
+    <th:block th:fragment="stylesheets">
+        <link rel="stylesheet" href="/podcast-website/styles/reset.css" />
+        <link rel="stylesheet" href="/podcast-website/styles/base.css" />
+    </th:block>
+
+    <!-- Site Header Fragment -->
+    <header th:fragment="site-header">
+        <h1><a href="/">Placeholder NPCs</a></h1>
+        <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42989027/42989027-1740182182670-c5d593678b89f.jpg" style="width:7rem; border-radius: 0.25rem" />
+    </header>
+
+    <!-- Site Navigation Fragment -->
+    <nav th:fragment="site-navigation">
+        <a href="/podcast-website/">Latest</a>
+        <a href="/podcast-website/episodes">Episodes</a>
+        <a href="/podcast-website/cast">Cast</a>
+        <a href="/podcast-website/about">About</a>
+    </nav>
+</body>
+</html>

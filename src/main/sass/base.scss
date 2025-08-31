@@ -1,0 +1,36 @@
+
+
+body > header,
+body > nav,
+body > main,
+body > footer {
+  padding: 0 calc(50% - 45rem);
+
+  @media (max-width: 92rem) {
+    padding: 0 1rem;
+  }
+}
+
+body > main {
+  border-top: var(--size-2px) solid var(--palette-color-armadillo-500);
+  border-bottom: var(--size-2px) solid var(--palette-color-armadillo-500);
+}
+
+body > header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: start;
+
+  img {
+    width: 3rem;
+    margin: 3rem 0 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 5rem;
+    white-space: nowrap;
+  }
+}

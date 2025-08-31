@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Page Not Found</title>
-        <link rel="stylesheet" href="./styles/reset.css" />
+        <title>Page Not Found &bull; Placeholder NPCs</title>
+        <th:block th:replace="~{base :: stylesheets}" />
     </head>
     <body>
-        <header>
-            <h1>Placeholder NPCs</h1>
-        </header>
-        <nav>Placeholder Navigation</nav>
+        <th:block th:replace="~{base :: site-header}" />
+        <th:block th:replace="~{base :: site-navigation}" />
         <main>Page Not Found</main>
         <footer>Placeholder Footer</footer>
     </body>
