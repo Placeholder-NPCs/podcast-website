@@ -20,17 +20,16 @@ public class Application {
   private static Map<String, Object> context = new HashMap<>();
 
   public static void main(final String[] args) throws Exception {
-    System.out.println("Running Application");
+    System.out.println("  Running Application");
 
-    System.out.println("Processing RSS Feed");
+    System.out.println("  Processing RSS Feed");
     final URL rssUrl = new URL("https://anchor.fm/s/100d4a32c/podcast/rss");
     final RssFeed rssFeed = new RssService().fetchRssFeed(rssUrl);
     Application.context.put("rssFeed", rssFeed);
-    System.out.println(rssFeed);
 
-    System.out.println("Processing Template Pages");
+    System.out.println("  Processing Template Pages");
     listResourceFiles("templates/pages").stream()
-        .peek(p -> System.out.println("- " + p))
+        .peek(p -> System.out.println("  - " + p))
         .filter(p -> p.endsWith(".html"))
         .map(p -> p.substring(0, p.length() - 5))
         .forEach(Application::processTemplate);
