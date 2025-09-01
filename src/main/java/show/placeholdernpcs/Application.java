@@ -5,15 +5,28 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import show.placeholdernpcs.model.Configuration;
+import show.placeholdernpcs.model.rss.RssFeed;
+import show.placeholdernpcs.service.rss.RssService;
 import show.placeholdernpcs.service.template.TemplateService;
 
 public class Application {
+
+  private static Map<String, Object> context = new HashMap<>();
+
   public static void main(final String[] args) throws Exception {
     System.out.println("Running Application");
+
+    System.out.println("Processing RSS Feed");
+    final URL rssUrl = new URL("https://anchor.fm/s/100d4a32c/podcast/rss");
+    final RssFeed rssFeed = new RssService().fetchRssFeed(rssUrl);
+    Application.context.put("rssFeed", rssFeed);
+    System.out.println(rssFeed);
 
     System.out.println("Processing Template Pages");
     listResourceFiles("templates/pages").stream()
@@ -25,7 +38,7 @@ public class Application {
 
   private static void processTemplate(final String withTemplateName) {
     try {
-      final String html = TemplateService.process("pages/" + withTemplateName);
+      final String html = TemplateService.process("pages/" + withTemplateName, Application.context);
       Path file = Paths.get("./deploy/" + withTemplateName + ".html");
       Files.writeString(file, html);
     } catch (IOException e) {
