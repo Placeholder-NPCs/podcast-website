@@ -18,6 +18,7 @@ public record Item(
     @JsonProperty("pubDate") ZonedDateTime publicationDate,
     @JsonProperty("link") URL link,
     @JacksonXmlProperty(namespace = "itunes", localName = "image") Image itunesImage,
+    @JacksonXmlProperty(namespace = "itunes", localName = "duration") String itunesDuration,
     @JacksonXmlProperty(namespace = "itunes", localName = "season") int itunesSeason,
     @JacksonXmlProperty(namespace = "itunes", localName = "episode") int itunesEpisode,
     @JacksonXmlProperty(namespace = "itunes", localName = "episodeType") String itunesEpisodeType) {
@@ -26,6 +27,14 @@ public record Item(
     return Optional.ofNullable(this.itunesEpisodeType)
         .filter(itunesEpisodeType -> itunesEpisodeType.equalsIgnoreCase("full"))
         .isPresent();
+  }
+
+  public String isoPublicationDate() {
+    return this.publicationDate.format(DateTimeFormatter.ISO_DATE_TIME);
+  }
+
+  public String displayPublicationDate() {
+    return this.publicationDate.format(DateTimeFormatter.ofPattern("MMMM d"));
   }
 
   public static class Builder {

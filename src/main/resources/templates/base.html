@@ -38,7 +38,7 @@
     <!-- Site Header Fragment -->
     <header th:fragment="site-header">
         <h1><a href="/" th:inline="text">[[ ${rssFeed.channel.title} ]]</a></h1>
-        <img src="./site-logo.jpg" />
+        <img th:src="${rssFeed.channel.itunesImage.href}" />
     </header>
 
     <!-- Site Navigation Fragment -->
