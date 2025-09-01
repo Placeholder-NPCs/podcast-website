@@ -5,6 +5,7 @@
     <th:block th:fragment="stylesheets">
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/component.css" />
     </th:block>
 
     <!-- Meta Data -->
@@ -13,6 +14,7 @@
         <meta name="robots" content="noindex, noimageai, noai" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#d1c6b4" />
+        <link rel="alternate" type="application/rss+xml" title="Placeholder NPCs RSS Feed" href="https://anchor.fm/s/100d4a32c/podcast/rss">
     </th:block>
 
     <!-- Service Worker -->
@@ -36,7 +38,7 @@
     <!-- Site Header Fragment -->
     <header th:fragment="site-header">
         <h1><a href="/" th:inline="text">[[ ${rssFeed.channel.title} ]]</a></h1>
-        <img src="./site-logo.jpg" />
+        <img th:src="${rssFeed.channel.itunesImage.href}" />
     </header>
 
     <!-- Site Navigation Fragment -->

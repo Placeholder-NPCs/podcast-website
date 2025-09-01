@@ -69,7 +69,7 @@ body > nav {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     min-width: 10rem;
 
     svg {
@@ -210,4 +210,21 @@ body > footer {
       }
     }
   }
+}
+
+article {
+  background: var(--palette-color-tana-500);
+  padding: 0;
+  margin: 1rem 0;
+
+  header {
+    background: var(--palette-color-armadillo-500);
+    color: var(--palette-color-tana-500);
+    fill: var(--palette-color-tana-500);
+    padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      font-weight: lighter;
+  }
+
+
 }

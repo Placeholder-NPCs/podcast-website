@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Latest Episode Panel -->
+    <article th:fragment="latest-episode-article(rssItem)">
+        <header>
+            <h2>Latest Episode</h2>
+        </header>
+        <th:block th:replace="~{ :: episode-details-section(${rssItem})}" />
+    </article>
+
+    <!-- Episode Details Section -->
+    <section class="pwc-episode-details" th:fragment="episode-details-section(rssItem)">
+        <h3 th:text="${rssItem.title}"></h3>
+        <time th:datetime="${rssItem.isoPublicationDate}">[[${rssItem.displayPublicationDate}]]</time>
+        <div title="Episode Duration" class="metadata"><th:block th:replace="~{svg :: timer}" /> <time>[[${rssItem.itunesDuration}]]</time></div>
+
+        <img th:src="${rssItem.itunesImage.href}" />
+        <div class="description" th:utext="${rssItem.description}"></div>
+    </section>
+
+</body>
+</html>

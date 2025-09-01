@@ -2,6 +2,7 @@ package show.placeholdernpcs.service.rss;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,6 +15,7 @@ public record RssService() {
   public RssFeed fetchRssFeed(final URL withRssFeedUrl) throws IOException {
     final XmlMapper xmlMapper = new XmlMapper();
     xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+    xmlMapper.registerModule(new JavaTimeModule());
 
     try (final InputStream inputStream = withRssFeedUrl.openStream();
         final InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -23,9 +25,7 @@ public record RssService() {
       while ((line = bufferedReader.readLine()) != null) {
         xmlContent.append(line);
       }
-      final String xml = xmlContent.toString();
-      System.out.println(xml);
-      return xmlMapper.readValue(xml, RssFeed.class);
+      return xmlMapper.readValue(xmlContent.toString(), RssFeed.class);
     }
   }
 }
