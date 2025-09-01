@@ -17,7 +17,7 @@ public record Item(
     @JsonProperty("guid") String guid,
     @JsonProperty("pubDate") ZonedDateTime publicationDate,
     @JsonProperty("link") URL link,
-    @JacksonXmlProperty(namespace = "itunes", localName = "image") URL itunesImage,
+    @JacksonXmlProperty(namespace = "itunes", localName = "image") Image itunesImage,
     @JacksonXmlProperty(namespace = "itunes", localName = "season") int itunesSeason,
     @JacksonXmlProperty(namespace = "itunes", localName = "episode") int itunesEpisode,
     @JacksonXmlProperty(namespace = "itunes", localName = "episodeType") String itunesEpisodeType) {

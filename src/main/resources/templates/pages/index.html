@@ -9,17 +9,8 @@
     <body>
         <th:block th:replace="~{base :: site-header}" />
         <th:block th:replace="~{base :: site-navigation('index')}" />
-        <main>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+        <main th:with="latestEpisode=${rssFeed.channel.latestEpisode}">
+            <th:block th:replace="~{component :: latest-episode-article(${latestEpisode})}" />
         </main>
         <th:block th:replace="~{base :: site-footer}" />
     </body>

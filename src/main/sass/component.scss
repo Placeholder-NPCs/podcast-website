@@ -1,0 +1,11 @@
+.pwc- {
+  &episode-details {
+    padding: 1rem;
+
+    > img {
+      width: 7rem;
+      border: var(--size-1px) solid var(--palette-color-armadillo-500);
+      border-radius: var(--size-4px);
+    }
+ }
+}
