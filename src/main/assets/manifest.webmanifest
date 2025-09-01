@@ -19,7 +19,7 @@
     }
   ],
   "orientation": "any",
-  "display": "fullscreen",
+  "display": "minimal-ui",
   "dir": "auto",
   "lang": "en-AU",
   "start_url": "/podcast-website/",
