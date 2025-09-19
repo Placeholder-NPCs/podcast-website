@@ -87,6 +87,17 @@
   --palette-color-armadillo-800: #2f1d00;
   --palette-color-armadillo-900: #241500;
 
+  /* Sisal Colour Palette */
+  --palette-color-sisal-50: #fcf4e5;
+  --palette-color-sisal-100: #f3ecdd;
+  --palette-color-sisal-200: #ebe4d5;
+  --palette-color-sisal-300: #e2dbcd;
+  --palette-color-sisal-400: #dad3c5;
+  --palette-color-sisal-500: #d3cbba;
+  --palette-color-sisal-600: #b2a280;
+  --palette-color-sisal-700: #846d3a;
+  --palette-color-sisal-800: #513c00;
+  --palette-color-sisal-900: #211600;
 
   /* Sizes */
   --size-1px: 0.0625rem;
@@ -132,7 +143,7 @@ time, mark, audio, video {
 }
 
 html {
-  background: var(--palette-color-pearlbrush-500);
+  background: var(--palette-color-sisal-500);
   color: var(--palette-color-armadillo-500);
   fill: var(--palette-color-armadillo-500);
 }
