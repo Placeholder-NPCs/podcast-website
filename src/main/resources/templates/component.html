@@ -24,6 +24,11 @@
         <div title="Episode Duration" class="metadata"><th:block th:replace="~{svg :: timer}" /> <time>[[${rssItem.itunesDuration}]]</time></div>
 
         <img th:src="${rssItem.itunesImage.href}" />
+        <a th:href="${rssItem.link}" target="_blank" class="listen-now">
+            <th:block th:replace="~{svg :: volume-max}"></th:block>
+            <span>Listen Now</span>
+        </a>
+
         <div class="description" th:utext="${rssItem.description}"></div>
     </section>
 
