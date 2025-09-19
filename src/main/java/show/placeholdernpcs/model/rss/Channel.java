@@ -25,4 +25,11 @@ public record Channel(
         .max(Comparator.comparing(Item::publicationDate))
         .orElse(null);
   }
+
+  public List<Item> allFullEpisodes() {
+    return item.stream()
+        .filter(Item::isFullEpisode)
+        .sorted(Comparator.comparing(Item::publicationDate).reversed())
+        .toList();
+  }
 }

@@ -10,16 +10,9 @@
         <th:block th:replace="~{base :: site-header}" />
         <th:block th:replace="~{base :: site-navigation('episodes')}" />
         <main>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <th:block th:each="episode : ${rssFeed.channel.allFullEpisodes}">
+                <th:block th:replace="~{component :: episode-article(${episode})}" />
+            </th:block>
         </main>
         <th:block th:replace="~{base :: site-footer}" />
     </body>

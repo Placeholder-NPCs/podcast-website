@@ -9,6 +9,14 @@
         <th:block th:replace="~{ :: episode-details-section(${rssItem})}" />
     </article>
 
+    <!-- Episode Details Panel -->
+    <article th:fragment="episode-article(rssItem)">
+        <header>
+            <h2>Season [[${rssItem.itunesSeason}]] &bull; Episode [[${rssItem.itunesEpisode}]]</h2>
+        </header>
+        <th:block th:replace="~{ :: episode-details-section(${rssItem})}" />
+    </article>
+
     <!-- Episode Details Section -->
     <section class="pwc-episode-details" th:fragment="episode-details-section(rssItem)">
         <h3 th:text="${rssItem.title}"></h3>
