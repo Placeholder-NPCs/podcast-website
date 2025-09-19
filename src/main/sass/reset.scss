@@ -1,28 +1,4 @@
 :root {
-  /* Soft Amber Colour Palette */
-  --palette-color-softamber-50: #fdf4e4;
-  --palette-color-softamber-100: #f4ebdb;
-  --palette-color-softamber-200: #ebe1d2;
-  --palette-color-softamber-300: #e2d8c9;
-  --palette-color-softamber-400: #d9cfc0;
-  --palette-color-softamber-500: #d1c6b4;
-  --palette-color-softamber-600: #b29d7c;
-  --palette-color-softamber-700: #866a37;
-  --palette-color-softamber-800: #533900;
-  --palette-color-softamber-900: #231600;
-
-  /* Armadillo Colour Palette */
-  --palette-color-armadillo-50: #f9f4ee;
-  --palette-color-armadillo-100: #d1cdc6;
-  --palette-color-armadillo-200: #aba6a0;
-  --palette-color-armadillo-300: #86827c;
-  --palette-color-armadillo-400: #635f59;
-  --palette-color-armadillo-500: #433e37;
-  --palette-color-armadillo-600: #42341f;
-  --palette-color-armadillo-700: #3d2700;
-  --palette-color-armadillo-800: #2f1d00;
-  --palette-color-armadillo-900: #241500;
-
   /* Fuscous Gray Colour Palette */
   --palette-color-fuscousgray-50: #f6f5f1;
   --palette-color-fuscousgray-100: #d3d2ce;
@@ -34,18 +10,6 @@
   --palette-color-fuscousgray-700: #3e360c;
   --palette-color-fuscousgray-800: #2d2600;
   --palette-color-fuscousgray-900: #1d1800;
-
-  /* Tana Colour Palette */
-  --palette-color-tana-50: #fdfff1;
-  --palette-color-tana-100: #f6f9e0;
-  --palette-color-tana-200: #eff1d9;
-  --palette-color-tana-300: #e7ead2;
-  --palette-color-tana-400: #e0e3cb;
-  --palette-color-tana-500: #d9dcc1;
-  --palette-color-tana-600: #aeb286;
-  --palette-color-tana-700: #787c3d;
-  --palette-color-tana-800: #434600;
-  --palette-color-tana-900: #191a00;
 
   /* Quicksand Colour Palette (Note: Reddish) */
   --palette-color-quicksand-50: #fff2ef
@@ -82,6 +46,47 @@
   --palette-color-taupegray-700: #6e6321;
   --palette-color-taupegray-800: #423a00;
   --palette-color-taupegray-900: #1d1800;
+
+
+
+
+  /* UPDATED COLOURS */
+  /* Pearl Brush Colour Palette */
+  --palette-color-pearlbrush-50: #fffdfa;
+  --palette-color-pearlbrush-100: #fdf7ee;
+  --palette-color-pearlbrush-200: #f7f1e9;
+  --palette-color-pearlbrush-300: #f2ebe3;
+  --palette-color-pearlbrush-400: #ece6dd;
+  --palette-color-pearlbrush-500: #e8e0d5;
+  --palette-color-pearlbrush-600: #c4b197;
+  --palette-color-pearlbrush-700: #92764d;
+  --palette-color-pearlbrush-800: #5c3d00;
+  --palette-color-pearlbrush-900: #241500;
+
+  /* Ecru White Colour Palette */
+  --palette-color-ecruwhite-50: #fffef5;
+  --palette-color-ecruwhite-100: #fdfcf0;
+  --palette-color-ecruwhite-200: #fbfaee;
+  --palette-color-ecruwhite-300: #f9f7ec;
+  --palette-color-ecruwhite-400: #f7f5ea;
+  --palette-color-ecruwhite-500: #f5f3e5;
+  --palette-color-ecruwhite-600: #c8c3a2;
+  --palette-color-ecruwhite-700: #8c8453;
+  --palette-color-ecruwhite-800: #524800;
+  --palette-color-ecruwhite-900: #1d1800;
+
+  /* Armadillo Colour Palette */
+  --palette-color-armadillo-50: #f9f4ee;
+  --palette-color-armadillo-100: #d1cdc6;
+  --palette-color-armadillo-200: #aba6a0;
+  --palette-color-armadillo-300: #86827c;
+  --palette-color-armadillo-400: #635f59;
+  --palette-color-armadillo-500: #433e37;
+  --palette-color-armadillo-600: #42341f;
+  --palette-color-armadillo-700: #3d2700;
+  --palette-color-armadillo-800: #2f1d00;
+  --palette-color-armadillo-900: #241500;
+
 
   /* Sizes */
   --size-1px: 0.0625rem;
@@ -127,7 +132,7 @@ time, mark, audio, video {
 }
 
 html {
-  background: var(--palette-color-softamber-500);
+  background: var(--palette-color-pearlbrush-500);
   color: var(--palette-color-armadillo-500);
   fill: var(--palette-color-armadillo-500);
 }

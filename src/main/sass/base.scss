@@ -78,7 +78,7 @@ body > nav {
 
       background:  var(--palette-color-armadillo-500);
       border-radius: var(--size-2px);
-      stroke: var(--palette-color-tana-500);
+      stroke: var(--palette-color-ecruwhite-500);
       fill: none;
     }
 
@@ -91,22 +91,22 @@ body > nav {
     &.current-page {
       background: var(--palette-color-armadillo-500);
       border-bottom: 0.25rem solid var(--palette-color-armadillo-500);
-      color: var(--palette-color-tana-500);
+      color: var(--palette-color-ecruwhite-500);
 
       svg {
-        background:  var(--palette-color-tana-500);
+        background:  var(--palette-color-ecruwhite-500);
         stroke: var(--palette-color-armadillo-500);
       }
     }
 
     &:hover {
-      background: var(--palette-color-tana-500);
-      border-color: var(--palette-color-tana-500);
+      background: var(--palette-color-ecruwhite-500);
+      border-color: var(--palette-color-ecruwhite-500);
       color: var(--palette-color-armadillo-500);
 
       svg {
         background:  var(--palette-color-armadillo-500);
-        stroke: var(--palette-color-tana-500);
+        stroke: var(--palette-color-ecruwhite-500);
       }
     }
   }
@@ -139,7 +139,7 @@ body > nav {
       }
 
       &:hover {
-        border-color: var(--palette-color-tana-500);
+        border-color: var(--palette-color-ecruwhite-500);
       }
 
       span {
@@ -213,14 +213,14 @@ body > footer {
 }
 
 article {
-  background: var(--palette-color-tana-500);
+  background: var(--palette-color-ecruwhite-500);
   padding: 0;
   margin: 1rem 0;
 
   header {
     background: var(--palette-color-armadillo-500);
-    color: var(--palette-color-tana-500);
-    fill: var(--palette-color-tana-500);
+    color: var(--palette-color-ecruwhite-500);
+    fill: var(--palette-color-ecruwhite-500);
     padding: 0.5rem 1rem;
       text-transform: uppercase;
       font-weight: lighter;
