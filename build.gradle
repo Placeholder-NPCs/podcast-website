@@ -2,7 +2,7 @@ plugins {
 	// Compiling
 	id 'application'
 	id 'java'
-	id 'io.miret.etienne.sass' version '1.5.2' // SASS Compiler
+	id 'io.miret.etienne.sass' version '1.6.0' // SASS Compiler
 
 	// Formatting
 	id 'com.diffplug.spotless' version "7.2.1" // Code formatting
@@ -22,10 +22,10 @@ repositories {
 dependencies {
 	// commonmark
 	// MVN Repository: https://mvnrepository.com/artifact/org.commonmark/commonmark
-	implementation 'org.commonmark:commonmark:0.25.1'
-	implementation 'org.commonmark:commonmark-ext-gfm-tables:0.25.1'
-	implementation 'org.commonmark:commonmark-ext-heading-anchor:0.25.1'
-	implementation 'org.commonmark:commonmark-ext-yaml-front-matter:0.25.1'
+	implementation 'org.commonmark:commonmark:0.27.1'
+	implementation 'org.commonmark:commonmark-ext-gfm-tables:0.27.1'
+	implementation 'org.commonmark:commonmark-ext-heading-anchor:0.27.1'
+	implementation 'org.commonmark:commonmark-ext-yaml-front-matter:0.27.1'
 
 	// thymeleaf
 	// Website: https://www.thymeleaf.org/index.html
@@ -35,18 +35,18 @@ dependencies {
 
 	// Jackson Data Modules
 	// MVN Repository: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.0'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.20.0'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.20.0'
-	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.20.0'
-	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.20.0'
-	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.20.0'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.0'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.21.0'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.0'
+	implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.21.0'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.21.0'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.21.0'
 
 	// project lombok
-	compileOnly 'org.projectlombok:lombok:1.18.34'
-	annotationProcessor 'org.projectlombok:lombok:1.18.34'
-	testCompileOnly 'org.projectlombok:lombok:1.18.34'
-	testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
+	compileOnly 'org.projectlombok:lombok:1.18.42'
+	annotationProcessor 'org.projectlombok:lombok:1.18.42'
+	testCompileOnly 'org.projectlombok:lombok:1.18.42'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.42'
 
 	// Testing Dependencies
 	// MVN Repository: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
